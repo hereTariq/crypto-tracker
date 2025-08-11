@@ -77,7 +77,8 @@ yarn dev
 ### 3️⃣ Set Up Frontend
 
 ```bash
-cd ../client
+In another terminal
+cd client
 ```
 
 #### Configure Environment
