@@ -6,8 +6,6 @@ A full-stack application to track top cryptocurrencies with price history charts
 - **Database**: MongoDB
 - **Data Source**: CoinGecko API
 
-![App Screenshot](/screenshot.png)
-
 ## Features
 
 - Real-time cryptocurrency price tracking
@@ -24,10 +22,85 @@ A full-stack application to track top cryptocurrencies with price history charts
 - MongoDB Atlas account (or local MongoDB)
 - CoinGecko API key (free tier works)
 
+## Live URLs
+
+### Backend API
+```bash
+https://crypto-tracker-nine-xi.vercel.app/
+```
+
+### Frontend
+```bash
+https://crypto-tracker-7cfj.vercel.app
+```
+
+
 ## Setup Instructions
 
-### 1. Clone the Repository
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/hereTariq/crypto-tracker.git
 cd crypto-tracker
+```
+
+### 2️⃣ Set Up Backend
+
+```bash
+cd server
+```
+
+#### Install Dependencies
+```bash
+yarn install
+```
+
+#### Configure Environment
+Create a `.env` file inside the `server` directory:
+
+```env
+MONGODB_URI=mongodb://127.0.0.1:27017
+DB_NAME = crypto-tracker
+PORT=3009
+CLIENT_URL=http://localhost:5173
+```
+
+#### Start Backend Server
+```bash
+yarn dev
+```
+
+✅ The backend will be running at: **[http://localhost:3009](http://localhost:3009)**
+
+---
+
+### 3️⃣ Set Up Frontend
+
+```bash
+cd ../client
+```
+
+#### Configure Environment
+Create a `.env` file inside the `client` directory:
+
+```env
+VITE_BASE_URL=http://localhost:3009/api
+```
+
+#### Install Dependencies
+```bash
+yarn install
+```
+
+#### Start Development Server
+```bash
+yarn dev
+```
+
+✅ The frontend will be running at: **[http://localhost:5173](http://localhost:5173)**
+
+
+## 🛠️ Tech Stack
+
+**Frontend:** React, Vite, Tailwind CSS
+**Backend:** Node.js, Express.js, MongoDB, Mongoose  
