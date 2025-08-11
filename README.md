@@ -98,6 +98,14 @@ yarn install
 yarn dev
 ```
 
+### Cron Job Implementation
+Schedule: Runs every hour (at minute 0)
+Actions:
+Fetches fresh data from CoinGecko API
+Updates the "current prices" collection (overwrites)
+Appends new records to the "history" collection
+Logs success/errors to console
+
 ✅ The frontend will be running at: **[http://localhost:5173](http://localhost:5173)**
 
 
